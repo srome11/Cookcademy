@@ -10,7 +10,9 @@ import Foundation
 
 // Structures and Enummerations for the Recipes
 
-struct Recipe {
+struct Recipe: Identifiable {
+    var id = UUID()
+    
     var mainInformation: MainInformation        //all three use another struct as its type
     var ingredients: [Ingredient]
     var directions: [Direction]
